@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class LogSimulacao extends Model
+class SiteStatistics extends Model
 {
+    //para criar dados ficticios
     use HasFactory;
 
-    protected $fillable =['nome', 'email', 'valor_imovel', 'data'];
+    protected $fillable = ['start_time', 'end_time', 'origin', 'device', 'date'];
+
 }

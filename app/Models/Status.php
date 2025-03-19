@@ -9,10 +9,10 @@ class Status extends Model
 {
     use HasFactory;
 
-    protected $fillable =['descricao'];
+    protected $fillable =['description'];
 
-    public function imoveis()
+    public function properties()
     {
-        return $this->hasMany(Imovel::class);
+        return $this->hasMany(Property::class);
     }
 }

@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tipo extends Model
+class PropertyType extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['descricao'];
+    protected $fillable = ['description'];
 
-    public function imoveis()
+    public function properties()
     {
-        return $this->hasMany(Imovel::class);
+        return $this->hasMany(Property::class);
     }
 }

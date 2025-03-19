@@ -5,22 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cidade extends Model
+class City extends Model
 {
     //para criar dados ficticios
     use HasFactory;
 
-    protected $fillable = ['nome', 'estado'];
+    protected $fillable = ['name', 'state'];
 
     //relacionamento: uma ciadde tem muitos imoveis (UM PARA MUITOS)
-    public function imoveis()
+    public function properties()
     {
-        return $this->hasMany(Imovel::class);
+        return $this->hasMany(Property::class);
     }
 
     //relacionamento: uma cidade tem muitos depoimentos (UM PARA MUITOS)
-    public function depoimentos()
+    public function testimonials()
     {
-        return $this->hasMany(Depoimento::class);
+        return $this->hasMany(Testimonial::class);
     }
 }
