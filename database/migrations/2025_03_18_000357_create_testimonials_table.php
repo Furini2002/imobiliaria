@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('depoimentos', function (Blueprint $table) {
+        Schema::create('testimonials', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('text');
+            $table->string('photo');
+            $table->enum('status', ['A', 'I'])->default('A'); // A = Ativo, I = Inativo
+            $table->foreignId('city_id')->constrained()->onDelete('restrict');
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('depoimentos');
+        Schema::dropIfExists('testimonials');
     }
 };

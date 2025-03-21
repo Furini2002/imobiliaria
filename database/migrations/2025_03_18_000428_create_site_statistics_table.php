@@ -11,8 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('estatistica_sites', function (Blueprint $table) {
+        Schema::create('site_statistics', function (Blueprint $table) {
             $table->id();
+            $table->time('start_time');
+            $table->time('end_time');
+            $table->string('origin');
+            $table->string('device');
+            $table->date('date');
             $table->timestamps();
         });
     }
@@ -22,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('estatistica_sites');
+        Schema::dropIfExists('site_statistics');
     }
 };

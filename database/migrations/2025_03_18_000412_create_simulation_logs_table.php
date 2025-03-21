@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('simulation_log', function (Blueprint $table) {
+        Schema::create('simulation_logs', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email');
-            $table->decimal('property_value');
+            $table->decimal('property_value', 10, 2);
             $table->timestamps();
         });
     }
