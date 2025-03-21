@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('log_simulacaos', function (Blueprint $table) {
+        Schema::create('property_image', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -22,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('log_simulacaos');
+        Schema::dropIfExists('imagem_imovels');
     }
 };
