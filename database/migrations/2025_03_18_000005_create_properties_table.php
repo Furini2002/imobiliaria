@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id(); // Cria a chave primária
             $table->foreignId('city_id')->constrained()->onDelete('restrict'); // Chave estrangeira para cities
             $table->foreignId('status_id')->constrained()->onDelete('restrict'); // Chave estrangeira para status
-            $table->foreignId('type_id')->constrained()->onDelete('restrict'); // Chave estrangeira para property_types
+            $table->foreignId('type_id')->constrained('property_types')->onDelete('restrict'); // Chave estrangeira para property_types
             $table->string('title'); // Título do imóvel
             $table->text('description')->nullable(); // Descrição detalhada
             $table->string('address'); // Endereço
