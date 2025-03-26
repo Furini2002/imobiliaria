@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
-    //para criar dados ficticios
-    use HasFactory;
+   use HasFactory;
 
     protected $fillable = ['name', 'state'];
 
