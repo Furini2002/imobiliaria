@@ -2,16 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ApiResponse;
 use App\Models\City;
 use Illuminate\Http\Request;
+use Exception;
 
 class CityController extends Controller
 {
     //listar todas as cidades
     public function index()
     {
-        $cities = City::all();
-        return ApiResponse::success($cities, 'Cidades listadas com sucesso.');
+        try {
+            $cities = City::all();
+            return ApiResponse::success($cities, 'Cidades listadas com sucesso.');
+        } catch (Exception $e) {
+            return ApiResponse::error('Erro ao listar cidades.', 500, [$e->getMessage()]);
+        }
+
     }
 
     //cadastrar nova cidade
@@ -26,7 +33,7 @@ class CityController extends Controller
             $city = City::create($data);
             return ApiResponse::success($city, 'Cidade cadastrada com sucesso.', 201);
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return ApiResponse::error('Erro ao cadastrar cidade.', 500, [$e->getMessage()]);
         }
     }
@@ -36,8 +43,8 @@ class CityController extends Controller
         try {
             $city = City::findOrFail($id);
             return ApiResponse::success($city, 'Cidade encontrada com sucesso.');
-        } catch (\Exception $e) {
-            return ApiResponse::error('Cidade não encontrada.', 404);
+        } catch (Exception $e) {
+            return ApiResponse::error('Cidade não encontrada.', 404, [$e->getMessage()]);
         }
     }
 
@@ -54,7 +61,7 @@ class CityController extends Controller
 
             return ApiResponse::success($city, 'Cidade atualizada com sucesso.');
 
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return ApiResponse::error('Erro ao atualizar cidade.', 500, [$e->getMessage()]);
         }
     }
@@ -66,7 +73,7 @@ class CityController extends Controller
             $city->delete();
 
             return ApiResponse::success([], 'Cidade removida com sucesso.');
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return ApiResponse::error('Erro ao remover cidade.', 500, [$e->getMessage()]);
         }
     }

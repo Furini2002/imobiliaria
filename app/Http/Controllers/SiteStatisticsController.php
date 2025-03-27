@@ -2,47 +2,76 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ApiResponse;
+use App\Models\SiteStatistics;
+use Exception;
 use Illuminate\Http\Request;
 
 class SiteStatisticsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Listar todas as estatísticas do site
      */
     public function index()
     {
-        //
+        try {
+            $statistics = SiteStatistics::all();
+            return ApiResponse::success($statistics, 'Estatísticas listadas com sucesso.');
+        } catch (Exception $e) {
+            return ApiResponse::error('Erro ao listar estatísticas.', 500, [$e->getMessage()]);
+        }
+
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Cadastrando nova estatística do site
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $data = $request->validate([
+                'start_time' => 'required|date_format:H:i:s',
+                'end_time' => 'required|date_format:H:i:s|after_or_equal:start_time',
+                'origin' => 'required|string|max:255',
+                'device' => 'required|string|max:100',
+                'date' => 'required|date'
+            ]);
+
+            $statistic = SiteStatistics::create($data);
+
+            return ApiResponse::success($statistic, 'Estatística cadastrada com sucesso.', 201);
+
+        } catch (Exception $e) {
+            return ApiResponse::error('Erro ao cadastrar estatística.', 500, [$e->getMessage()]);
+        }
     }
 
-    /**
-     * Display the specified resource.
+
+    /*
+     * Mostra uma estatística específica
      */
     public function show(string $id)
     {
-        //
+        try {
+            $type = SiteStatistics::findOrFail($id);
+            return ApiResponse::success($type, 'Estatística encontrada com sucesso.');
+        } catch (Exception $e) {
+            return ApiResponse::error('Estatística não encontrada.', 404, [$e->getMessage()]);
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
+    /*
+     * Deletando estatística
      */
     public function destroy(string $id)
     {
-        //
+        try {
+            $type = SiteStatistics::findOrFail($id);
+            $type->delete();
+
+            return ApiResponse::success([], 'Estatística removida com sucesso.');
+        } catch (Exception $e) {
+            return ApiResponse::error('Erro ao remover estatística.', 500, [$e->getMessage()]);
+        }
     }
 }
