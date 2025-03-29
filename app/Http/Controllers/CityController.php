@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\StoreCityRequest;
+use App\Http\Requests\UpdateCityRequest;
 use App\Models\City;
 use Illuminate\Http\Request;
 use Exception;
 
 class CityController extends Controller
 {
-    //listar todas as cidades
+    /*
+     * Lista todas as cidades
+     */
     public function index()
     {
         try {
@@ -21,16 +25,13 @@ class CityController extends Controller
 
     }
 
-    //cadastrar nova cidade
-    public function store(Request $request)
+    /*
+     * Cadastra uma cidade
+     */
+    public function store(StoreCityRequest $request)
     {
         try {
-            $data = $request->validate([
-                'name' => 'required',
-                'state' => 'required'
-            ]);
-
-            $city = City::create($data);
+            $city = City::create($request->validated());
             return ApiResponse::success($city, 'Cidade cadastrada com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -38,6 +39,9 @@ class CityController extends Controller
         }
     }
 
+    /*
+     * Mostra uma cidade específica
+     */
     public function show(string $id)
     {
         try {
@@ -48,16 +52,14 @@ class CityController extends Controller
         }
     }
 
-    public function update(Request $request, string $id)
+    /*
+     * Atualiza uma cidade
+     */
+    public function update(UpdateCityRequest $request, string $id)
     {
         try {
-            $data = $request->validate([
-                'name' => 'required',
-                'state' => 'required'
-            ]);
-
             $city = City::findOrFail($id);
-            $city->update($data);
+            $city->update($request->validated());
 
             return ApiResponse::success($city, 'Cidade atualizada com sucesso.');
 
@@ -66,6 +68,9 @@ class CityController extends Controller
         }
     }
 
+    /*
+     * Deleta uma cidade
+     */
     public function destroy(string $id)
     {
         try {

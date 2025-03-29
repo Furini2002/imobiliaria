@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\TypeRequest;
 use App\Models\PropertyType;
 use Exception;
-use Illuminate\Http\Request;
 
 class PropertyTypeController extends Controller
 {
-    //listar todos os tipos
+    /*
+     * Lista todos os tipos
+     */
     public function index()
     {
         try {
@@ -21,15 +23,13 @@ class PropertyTypeController extends Controller
 
     }
 
-    //cadastrar novo tipo
-    public function store(Request $request)
+    /*
+     * Cadastra um novo tipo
+     */
+    public function store(TypeRequest $request)
     {
         try {
-            $data = $request->validate([
-                'description' => 'required|string'
-            ]);
-
-            $type = PropertyType::create($data);
+            $type = PropertyType::create($request->validate());
             return ApiResponse::success($type, 'Tipo cadastrado com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -37,7 +37,9 @@ class PropertyTypeController extends Controller
         }
     }
 
-    //mostrar um tipo específico
+    /*
+     * Mostra um tipo específico
+     */
     public function show(string $id)
     {
         try {
@@ -48,15 +50,14 @@ class PropertyTypeController extends Controller
         }
     }
 
-    public function update(Request $request, string $id)
+    /*
+     * Atualiza um tipo
+     */
+    public function update(TypeRequest $request, string $id)
     {
         try {
-            $data = $request->validate([
-                'description' => 'required|string'
-            ]);
-
             $type = PropertyType::findOrFail($id);
-            $type->update($data);
+            $type->update($request->validate());
 
             return ApiResponse::success($type, 'Tipo atualizado com sucesso.');
 
@@ -65,7 +66,9 @@ class PropertyTypeController extends Controller
         }
     }
 
-    //deletando tipo
+    /*
+     * Deleta um tipo
+     */
     public function destroy(string $id)
     {
         try {

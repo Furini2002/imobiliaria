@@ -29,15 +29,7 @@ class TestimonialController extends Controller
     public function store(Request $request)
     {
         try {
-            $data = $request->validate([
-                'name' => 'required|string',
-                'city_id' => 'required|exists:cities,id',
-                'text' => 'required|string',
-                'photo' => 'required|string',
-                'status' => 'required|string'
-            ]);
-
-            $testimonial = Testimonial::create($data);
+            $testimonial = Testimonial::create($request->validate());
             return ApiResponse::success($testimonial, 'Depoimento cadastrado com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -64,16 +56,8 @@ class TestimonialController extends Controller
     public function update(Request $request, string $id)
     {
         try {
-            $data = $request->validate([
-                'name' => 'sometimes|required|string',
-                'city_id' => 'sometimes|required|exists:cities,id',
-                'text' => 'sometimes|required|string',
-                'photo' => 'sometimes|required|string',
-                'status' => 'sometimes|required|string'
-            ]);
-
             $testimonial = Testimonial::findOrFail($id);
-            $testimonial->update($data);
+            $testimonial->update($request->validate());
 
             return ApiResponse::success($testimonial, 'Depoimento atualizado com sucesso.');
 

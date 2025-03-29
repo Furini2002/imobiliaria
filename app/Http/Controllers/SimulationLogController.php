@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\StoreSimulationLogRequest;
+use App\Http\Requests\UpdateSimulationLogRequest;
 use App\Models\SimulationLog;
 use Exception;
 use Illuminate\Http\Request;
 
 class SimulationLogController extends Controller
 {
-    //listar todos os logs
+    /*
+     * Lista todos os logs
+     */
     public function index()
     {
         try {
@@ -21,17 +25,13 @@ class SimulationLogController extends Controller
 
     }
 
-    //cadastrar novo log
-    public function store(Request $request)
+    /*
+     * Cadastra um novo log
+     */
+    public function store(StoreSimulationLogRequest $request)
     {
         try {
-            $data = $request->validate([
-                'name' => 'required|string',
-                'email' => 'required|email',
-                'property_value' => 'required|numeric'
-            ]);
-
-            $log = SimulationLog::create($data);
+            $log = SimulationLog::create($request->validated());
             return ApiResponse::success($log, 'Log cadastrado com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -39,7 +39,9 @@ class SimulationLogController extends Controller
         }
     }
 
-    //mostrar um log específico
+    /*
+     * Mostra um log específico
+     */
     public function show(string $id)
     {
         try {
@@ -50,19 +52,14 @@ class SimulationLogController extends Controller
         }
     }
 
-    //atualizando um log
-    public function update(Request $request, string $id)
+    /*
+     * Atualiza um log
+     */
+    public function update(UpdateSimulationLogRequest $request, string $id)
     {
         try {
-            //something, só valida o campo caso ele estiver no request
-            $data = $request->validate([
-                'name' => 'sometimes|required|string',
-                'email' => 'sometimes|required|email',
-                'property_value' => 'sometimes|required|numeric',
-            ]);
-
             $log = SimulationLog::findOrFail($id);
-            $log->update($data);
+            $log->update($request->validated());
 
             return ApiResponse::success($log, 'Log atualizado com sucesso.');
 
@@ -71,7 +68,9 @@ class SimulationLogController extends Controller
         }
     }
 
-    //deletando log
+    /*
+     * Deleta um log
+     */
     public function destroy(string $id)
     {
         try {

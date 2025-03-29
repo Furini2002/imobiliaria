@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\StorePropertyRequest;
+use App\Http\Requests\UpdatePropertyRequest;
 use App\Models\Property;
 use Exception;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
 {
-    //listar todas os imoveis
+    /*
+     * Lista todas os imóveis
+     */
     public function index()
     {
         try {
@@ -21,26 +25,13 @@ class PropertyController extends Controller
 
     }
 
-    //cadastrar novo imóvel
-    public function store(Request $request)
+    /*
+     * Cadastra um novo imóvel
+     */
+    public function store(StorePropertyRequest $request)
     {
         try {
-            $data = $request->validate([
-                'title' => 'required|string',
-                'description' => 'nullable|string',
-                'address' => 'required|string',
-                'features' => 'nullable|string',
-                'price' => 'required|numeric',
-                'bedrooms' => 'required|integer',
-                'bathrooms' => 'required|integer',
-                'land_area' => 'required|numeric',
-                'built_area' => 'required|numeric',
-                'city_id' => 'required|exists:cities,id',
-                'status_id' => 'required|exists:statuses,id',
-                'type_id' => 'required|exists:property_types,id'
-            ]);
-
-            $property = Property::create($data);
+            $property = Property::create($request->validated());
 
             return ApiResponse::success($property, 'Imóvel cadastrado com sucesso.', 201);
 
@@ -49,7 +40,9 @@ class PropertyController extends Controller
         }
     }
 
-    //mostra um imóvel
+    /*
+     * Mostra um imóvel específico
+     */
     public function show(string $id)
     {
         try {
@@ -60,27 +53,14 @@ class PropertyController extends Controller
         }
     }
 
-    //atualizando um registro de imóvel
-    public function update(Request $request, string $id)
+    /*
+     * Atualiza um imóvel específico
+     */
+    public function update(UpdatePropertyRequest $request, string $id)
     {
         try {
-            $data = $request->validate([
-                'title' => 'required',
-                'description' => 'nullable',
-                'address' => 'required',
-                'features' => 'nullable',
-                'price' => 'required',
-                'bedrooms' => 'required',
-                'bathrooms' => 'required',
-                'land_area' => 'required',
-                'built_area' => 'required',
-                'city_id' => 'required|exists:cities,id',
-                'status_id' => 'required|exists:statuses,id',
-                'type_id' => 'required|exists:property_types,id'
-            ]);
-
             $city = Property::findOrFail($id);
-            $city->update($data);
+            $city->update($request->validated());
 
             return ApiResponse::success($city, 'Imóvel atualizado com sucesso.');
 
@@ -89,6 +69,9 @@ class PropertyController extends Controller
         }
     }
 
+    /*
+     * Deleta um imóvel
+     */
     public function destroy(string $id)
     {
         try {

@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\StorePropertyImageRequest;
+use App\Http\Requests\UpdatePropertyImageRequest;
 use App\Models\PropertyImage;
 use Exception;
-use Illuminate\Http\Request;
 
 class PropertyImageController extends Controller
 {
-    //listando todas as imagens de um imóvel
+    /*
+     * Lista as imagens de um imóvel específico
+     */
     public function indexByProperty(string $propertyId)
     {
         try {
@@ -21,16 +24,13 @@ class PropertyImageController extends Controller
         }
     }
 
-    //cadastrar nova imagem
-    public function store(Request $request)
+    /*
+     * Cadastra a imagem de um imóvel
+     */
+    public function store(StorePropertyImageRequest $request)
     {
         try {
-            $data = $request->validate([
-                'image_path' => 'required|string',
-                'property_id' => 'required|integer'
-            ]);
-
-            $propertyImages = PropertyImage::create($data);
+            $propertyImages = PropertyImage::create($request->validate());
 
             return ApiResponse::success($propertyImages, 'Imagem cadastrada com sucesso.', 201);
 
@@ -39,7 +39,9 @@ class PropertyImageController extends Controller
         }
     }
 
-    //mostra uma imagem
+    /*
+     * Mostra uma imagem do imóvel
+     */
     public function show(string $id)
     {
         try {
@@ -50,17 +52,14 @@ class PropertyImageController extends Controller
         }
     }
 
-    //atualizando uma imagem
-    public function update(Request $request, string $id)
+    /*
+     * Atualiza uma imagem
+     */
+    public function update(UpdatePropertyImageRequest $request, string $id)
     {
         try {
-            $data = $request->validate([
-                'image_path' => 'required|string',
-                'property_id' => 'required|integer'
-            ]);
-
             $propertyImages = PropertyImage::findOrFail($id);
-            $propertyImages->update($data);
+            $propertyImages->update($request->validate());
 
             return ApiResponse::success($propertyImages, 'Imagem atualizada com sucesso.');
 
@@ -69,6 +68,9 @@ class PropertyImageController extends Controller
         }
     }
 
+    /*
+     * Deleta uma imagem
+     */
     public function destroy(string $id)
     {
         try {

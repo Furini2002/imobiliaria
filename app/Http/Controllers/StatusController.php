@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\StatusRequest;
 use App\Models\Status;
 use Exception;
 use Illuminate\Http\Request;
@@ -26,14 +27,10 @@ class StatusController extends Controller
     /*
      * Cadastra um novo status
      */
-    public function store(Request $request)
+    public function store(StatusRequest $request)
     {
         try {
-            $data = $request->validate([
-                'description' => 'required|string'
-            ]);
-
-            $status = Status::create($data);
+            $status = Status::create($request->validate());
             return ApiResponse::success($status, 'Status cadastrado com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -60,12 +57,8 @@ class StatusController extends Controller
     public function update(Request $request, string $id)
     {
         try {
-            $data = $request->validate([
-                'description' => 'required|string'
-            ]);
-
             $status = Status::findOrFail($id);
-            $status->update($data);
+            $status->update($request->validate());
 
             return ApiResponse::success($status, 'Status atualizado com sucesso.');
 

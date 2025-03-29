@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\StoreStatisticsRequest;
 use App\Models\SiteStatistics;
 use Exception;
 use Illuminate\Http\Request;
@@ -26,18 +27,10 @@ class SiteStatisticsController extends Controller
     /**
      * Cadastrando nova estatística do site
      */
-    public function store(Request $request)
+    public function store(StoreStatisticsRequest $request)
     {
         try {
-            $data = $request->validate([
-                'start_time' => 'required|date_format:H:i:s',
-                'end_time' => 'required|date_format:H:i:s|after_or_equal:start_time',
-                'origin' => 'required|string|max:255',
-                'device' => 'required|string|max:100',
-                'date' => 'required|date'
-            ]);
-
-            $statistic = SiteStatistics::create($data);
+            $statistic = SiteStatistics::create($request->validated());
 
             return ApiResponse::success($statistic, 'Estatística cadastrada com sucesso.', 201);
 
