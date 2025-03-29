@@ -29,4 +29,38 @@ class StoreStatisticsRequest extends FormRequest
             'date' => 'required|date'
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'start_time.required' => 'O horário de início é obrigatório.',
+            'start_time.date_format' => 'O horário de início deve estar no formato HH:MM:SS.',
+
+            'end_time.required' => 'O horário de término é obrigatório.',
+            'end_time.date_format' => 'O horário de término deve estar no formato HH:MM:SS.',
+            'end_time.after_or_equal' => 'O horário de término deve ser igual ou posterior ao horário de início.',
+
+            'origin.required' => 'A origem é obrigatória.',
+            'origin.string' => 'A origem deve ser um texto.',
+            'origin.max' => 'A origem deve ter no máximo :max caracteres.',
+
+            'device.required' => 'O dispositivo é obrigatório.',
+            'device.string' => 'O dispositivo deve ser um texto.',
+            'device.max' => 'O dispositivo deve ter no máximo :max caracteres.',
+
+            'date.required' => 'A data é obrigatória.',
+            'date.date' => 'A data deve ser válida.'
+        ];
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'start_time' => 'horário de início',
+            'end_time' => 'horário de término',
+            'origin' => 'origem',
+            'device' => 'dispositivo',
+            'date' => 'data',
+        ];
+    }
 }

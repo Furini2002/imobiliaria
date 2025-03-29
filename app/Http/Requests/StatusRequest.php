@@ -25,4 +25,26 @@ class StatusRequest extends FormRequest
             'description' => 'required|string|max:50',
         ];
     }
+
+    /**
+     * Mensagens personalizadas para os erros de validação.
+     */
+    public function messages(): array
+    {
+        return [
+            'description.required' => 'A descrição é obrigatória.',
+            'description.string' => 'A descrição deve ser um texto.',
+            'description.max' => 'A descrição deve ter no máximo :max caracteres.',
+        ];
+    }
+
+    /**
+     * Nomes amigáveis para os atributos.
+     */
+    public function attributes(): array
+    {
+        return [
+            'description' => 'descrição',
+        ];
+    }
 }

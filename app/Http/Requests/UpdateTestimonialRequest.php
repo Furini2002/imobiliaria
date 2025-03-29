@@ -29,4 +29,39 @@ class UpdateTestimonialRequest extends FormRequest
             'status' => 'sometimes|required|string|max:50'
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'O nome é obrigatório.',
+            'name.string' => 'O nome deve ser um texto.',
+            'name.max' => 'O nome deve ter no máximo :max caracteres.',
+
+            'city_id.required' => 'A cidade é obrigatória.',
+            'city_id.exists' => 'A cidade selecionada não é válida.',
+
+            'text.required' => 'O texto do depoimento é obrigatório.',
+            'text.string' => 'O texto do depoimento deve ser um texto.',
+            'text.max' => 'O texto do depoimento deve ter no máximo :max caracteres.',
+
+            'photo.required' => 'A foto é obrigatória.',
+            'photo.string' => 'A foto deve ser uma URL ou caminho válido.',
+            'photo.max' => 'A foto deve ter no máximo :max caracteres.',
+
+            'status.required' => 'O status é obrigatório.',
+            'status.string' => 'O status deve ser um texto.',
+            'status.max' => 'O status deve ter no máximo :max caracteres.',
+        ];
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'name' => 'nome',
+            'city_id' => 'cidade',
+            'text' => 'texto do depoimento',
+            'photo' => 'foto',
+            'status' => 'status',
+        ];
+    }
 }

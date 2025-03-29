@@ -25,4 +25,20 @@ class TypeRequest extends FormRequest
             'description' => 'required|string|max:255'
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'description.required' => 'A descrição é obrigatória.',
+            'description.string' => 'A descrição deve ser um texto.',
+            'description.max' => 'A descrição deve ter no máximo :max caracteres.',
+        ];
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'description' => 'descrição',
+        ];
+    }
 }

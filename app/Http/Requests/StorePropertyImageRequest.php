@@ -26,4 +26,24 @@ class StorePropertyImageRequest extends FormRequest
             'property_id' => 'required|integer'
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'image_path.required' => 'O caminho da imagem é obrigatório.',
+            'image_path.string' => 'O caminho da imagem deve ser um texto.',
+            'image_path.max' => 'O caminho da imagem deve ter no máximo :max caracteres.',
+
+            'property_id.required' => 'O ID do imóvel é obrigatório.',
+            'property_id.integer' => 'O ID do imóvel deve ser um número inteiro.',
+        ];
+    }
+
+    public function attributes(): array
+    {
+        return [
+            'image_path' => 'caminho da imagem',
+            'property_id' => 'ID do imóvel',
+        ];
+    }
 }

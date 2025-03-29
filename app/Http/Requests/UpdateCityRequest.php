@@ -26,4 +26,30 @@ class UpdateCityRequest extends FormRequest
             'state' => 'sometimes|required|string|max:2',
         ];
     }
+
+    /**
+     * Mensagens personalizadas para os erros de validação.
+     */
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'O nome da cidade é obrigatório.',
+            'name.string' => 'O nome da cidade deve ser um texto.',
+            'name.max' => 'O nome da cidade deve ter no máximo :max caracteres.',
+            'state.required' => 'O estado é obrigatório.',
+            'state.string' => 'O estado deve ser um texto.',
+            'state.max' => 'O estado deve ter no máximo :max caracteres (ex: PR, SP).',
+        ];
+    }
+
+    /**
+     * Nomes amigáveis para os atributos.
+     */
+    public function attributes(): array
+    {
+        return [
+            'name' => 'nome da cidade',
+            'state' => 'estado (UF)',
+        ];
+    }
 }
