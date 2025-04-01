@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * @method static create(array $data)
  * @method static findOrFail(string $id)
+ * @method static inRandomOrder()
  */
 class Property extends Model
 {

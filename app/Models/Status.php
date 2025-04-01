@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static create(array $data)
  * @method static findOrFail(string $id)
+ * @method static inRandomOrder()
  */
 class Status extends Model
 {
