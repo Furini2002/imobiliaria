@@ -5,10 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static create(array $data)
+ * @method static findOrFail(string $id)
+ * @method static inRandomOrder()
+ */
 class City extends Model
 {
-    //para criar dados ficticios
-    use HasFactory;
+   use HasFactory;
 
     protected $fillable = ['name', 'state'];
 

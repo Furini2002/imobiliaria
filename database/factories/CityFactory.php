@@ -12,7 +12,12 @@ class CityFactory extends Factory
     public function definition(): array
     {
         return [
+<<<<<<< HEAD
 
+=======
+            'name' => $this->faker->city,
+            'state' => $this->faker->stateAbbr(),
+>>>>>>> refactor/estrutura-laravel-nova
         ];
     }
 }
