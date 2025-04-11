@@ -30,7 +30,7 @@ class StatusController extends Controller
     public function store(StatusRequest $request)
     {
         try {
-            $status = Status::create($request->validate());
+            $status = Status::create($request->validated());
             return ApiResponse::success($status, 'Status cadastrado com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -54,11 +54,11 @@ class StatusController extends Controller
     /*
      * Atualiza um status
      */
-    public function update(Request $request, string $id)
+    public function update(StatusRequest $request, string $id)
     {
         try {
             $status = Status::findOrFail($id);
-            $status->update($request->validate());
+            $status->update($request->validated());
 
             return ApiResponse::success($status, 'Status atualizado com sucesso.');
 

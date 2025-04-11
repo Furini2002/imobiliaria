@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
+use App\Http\Requests\StoreTestimonialRequest;
+use App\Http\Requests\UpdateTestimonialRequest;
 use App\Models\Testimonial;
 use Exception;
 use Illuminate\Http\Request;
@@ -26,10 +28,10 @@ class TestimonialController extends Controller
     /*
      * Cadastra um novo depoimento
      */
-    public function store(Request $request)
+    public function store(StoreTestimonialRequest $request)
     {
         try {
-            $testimonial = Testimonial::create($request->validate());
+            $testimonial = Testimonial::create($request->validated());
             return ApiResponse::success($testimonial, 'Depoimento cadastrado com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -53,11 +55,11 @@ class TestimonialController extends Controller
     /*
      * Atualiza um depoimento
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateTestimonialRequest $request, string $id)
     {
         try {
             $testimonial = Testimonial::findOrFail($id);
-            $testimonial->update($request->validate());
+            $testimonial->update($request->validated());
 
             return ApiResponse::success($testimonial, 'Depoimento atualizado com sucesso.');
 

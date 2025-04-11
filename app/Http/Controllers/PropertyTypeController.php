@@ -29,7 +29,7 @@ class PropertyTypeController extends Controller
     public function store(TypeRequest $request)
     {
         try {
-            $type = PropertyType::create($request->validate());
+            $type = PropertyType::create($request->validated());
             return ApiResponse::success($type, 'Tipo cadastrado com sucesso.', 201);
 
         } catch (Exception $e) {
@@ -57,7 +57,7 @@ class PropertyTypeController extends Controller
     {
         try {
             $type = PropertyType::findOrFail($id);
-            $type->update($request->validate());
+            $type->update($request->validated());
 
             return ApiResponse::success($type, 'Tipo atualizado com sucesso.');
 

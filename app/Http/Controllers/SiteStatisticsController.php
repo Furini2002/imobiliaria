@@ -53,6 +53,15 @@ class SiteStatisticsController extends Controller
     }
 
     /*
+     * Atualiza uma estatística
+     * Não foi implementado pela regra de negócio, pois não faz sentido atualizar uma estatística que vai ser gravada como log
+     */
+    public function update()
+    {
+        return response()->json(['message' => 'Não implementado'], 501);
+    }
+
+    /*
      * Deletando estatística
      */
     public function destroy(string $id)

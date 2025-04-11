@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Helpers\ApiResponse;
 use App\Http\Requests\StorePropertyImageRequest;
+use App\Http\Requests\TestErrorRequest;
 use App\Http\Requests\UpdatePropertyImageRequest;
 use App\Models\PropertyImage;
 use Exception;
@@ -11,12 +12,25 @@ use Exception;
 class PropertyImageController extends Controller
 {
     /*
+     * Listar todos os properties
+     * Não foi implementado pela regra de negócio, pois não faz sentido listar todas as imagens de todos os imóveis
+     */
+    public function index()
+    {
+        return ApiResponse::error('Não implementado.', 501);
+    }
+
+    /*
      * Lista as imagens de um imóvel específico
      */
-    public function indexByProperty(string $propertyId)
+    public function getImagesByPropertyId(string $propertyId)
     {
         try {
             $images = PropertyImage::where('property_id', $propertyId)->get();
+
+            if ($images->isEmpty()) {
+                return ApiResponse::success([], 'Nenhuma imagem encontrada para este imóvel.');
+            }
 
             return ApiResponse::success($images, 'Imagens do imóvel listadas com sucesso.');
         } catch (Exception $e) {
@@ -30,7 +44,7 @@ class PropertyImageController extends Controller
     public function store(StorePropertyImageRequest $request)
     {
         try {
-            $propertyImages = PropertyImage::create($request->validate());
+            $propertyImages = PropertyImage::create($request->validated());
 
             return ApiResponse::success($propertyImages, 'Imagem cadastrada com sucesso.', 201);
 
@@ -59,7 +73,7 @@ class PropertyImageController extends Controller
     {
         try {
             $propertyImages = PropertyImage::findOrFail($id);
-            $propertyImages->update($request->validate());
+            $propertyImages->update($request->validated());
 
             return ApiResponse::success($propertyImages, 'Imagem atualizada com sucesso.');
 
