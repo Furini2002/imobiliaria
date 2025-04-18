@@ -4,11 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
-    "content-hash": "88970a0117c062eed55fa8728fc43833",
-=======
     "content-hash": "4062796daa44dc445dbc736505552873",
->>>>>>> refactor/estrutura-laravel-nova
     "packages": [
         {
             "name": "brick/math",
@@ -449,18 +445,6 @@
         },
         {
             "name": "egulias/email-validator",
-<<<<<<< HEAD
-            "version": "4.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "b115554301161fa21467629f1e1391c1936de517"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/b115554301161fa21467629f1e1391c1936de517",
-                "reference": "b115554301161fa21467629f1e1391c1936de517",
-=======
             "version": "4.0.4",
             "source": {
                 "type": "git",
@@ -471,7 +455,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
                 "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -517,11 +500,7 @@
             ],
             "support": {
                 "issues": "https://github.com/egulias/EmailValidator/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/egulias/EmailValidator/tree/4.0.3"
-=======
                 "source": "https://github.com/egulias/EmailValidator/tree/4.0.4"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -529,11 +508,7 @@
                     "type": "github"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-12-27T00:36:43+00:00"
-=======
             "time": "2025-03-06T22:45:56+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "fruitcake/php-cors",
@@ -670,18 +645,6 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-<<<<<<< HEAD
-            "version": "7.9.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "d281ed313b989f213357e3be1a179f02196ac99b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d281ed313b989f213357e3be1a179f02196ac99b",
-                "reference": "d281ed313b989f213357e3be1a179f02196ac99b",
-=======
             "version": "7.9.3",
             "source": {
                 "type": "git",
@@ -692,7 +655,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/guzzle/zipball/7b2f29fe81dc4da0ca0ea7d42107a0845946ea77",
                 "reference": "7b2f29fe81dc4da0ca0ea7d42107a0845946ea77",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -789,11 +751,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/guzzle/guzzle/tree/7.9.2"
-=======
                 "source": "https://github.com/guzzle/guzzle/tree/7.9.3"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -809,22 +767,6 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-07-24T11:22:20+00:00"
-        },
-        {
-            "name": "guzzlehttp/promises",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/promises.git",
-                "reference": "f9c436286ab2892c7db7be8c8da4ef61ccf7b455"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/f9c436286ab2892c7db7be8c8da4ef61ccf7b455",
-                "reference": "f9c436286ab2892c7db7be8c8da4ef61ccf7b455",
-=======
             "time": "2025-03-27T13:37:11+00:00"
         },
         {
@@ -839,7 +781,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/promises/zipball/7c69f28996b0a6920945dd20b3857e499d9ca96c",
                 "reference": "7c69f28996b0a6920945dd20b3857e499d9ca96c",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -893,11 +834,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/promises/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/guzzle/promises/tree/2.0.4"
-=======
                 "source": "https://github.com/guzzle/promises/tree/2.2.0"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -913,22 +850,6 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-10-17T10:06:22+00:00"
-        },
-        {
-            "name": "guzzlehttp/psr7",
-            "version": "2.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/psr7.git",
-                "reference": "a70f5c95fb43bc83f07c9c948baa0dc1829bf201"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/a70f5c95fb43bc83f07c9c948baa0dc1829bf201",
-                "reference": "a70f5c95fb43bc83f07c9c948baa0dc1829bf201",
-=======
             "time": "2025-03-27T13:27:01+00:00"
         },
         {
@@ -943,7 +864,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/guzzle/psr7/zipball/c2270caaabe631b3b44c85f99e5a04bbb8060d16",
                 "reference": "c2270caaabe631b3b44c85f99e5a04bbb8060d16",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -1030,11 +950,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/psr7/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/guzzle/psr7/tree/2.7.0"
-=======
                 "source": "https://github.com/guzzle/psr7/tree/2.7.1"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -1050,11 +966,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-07-18T11:15:46+00:00"
-=======
             "time": "2025-03-27T12:30:47+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "guzzlehttp/uri-template",
@@ -1144,18 +1056,6 @@
         },
         {
             "name": "laravel/framework",
-<<<<<<< HEAD
-            "version": "v12.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "2fb06941bc69ea92f28b2888535ab144ee006889"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2fb06941bc69ea92f28b2888535ab144ee006889",
-                "reference": "2fb06941bc69ea92f28b2888535ab144ee006889",
-=======
             "version": "v12.8.1",
             "source": {
                 "type": "git",
@@ -1166,7 +1066,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/d1ea3566f6e0cad34834c6d18db0bf995438eb87",
                 "reference": "d1ea3566f6e0cad34834c6d18db0bf995438eb87",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -1368,11 +1267,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-<<<<<<< HEAD
-            "time": "2025-03-12T14:38:20+00:00"
-=======
             "time": "2025-04-08T19:58:59+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "laravel/prompts",
@@ -1435,18 +1330,6 @@
         },
         {
             "name": "laravel/serializable-closure",
-<<<<<<< HEAD
-            "version": "v2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "f379c13663245f7aa4512a7869f62eb14095f23f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/f379c13663245f7aa4512a7869f62eb14095f23f",
-                "reference": "f379c13663245f7aa4512a7869f62eb14095f23f",
-=======
             "version": "v2.0.4",
             "source": {
                 "type": "git",
@@ -1457,7 +1340,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/serializable-closure/zipball/b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
                 "reference": "b352cf0534aa1ae6b4d825d1e762e35d43f8a841",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -1505,11 +1387,7 @@
                 "issues": "https://github.com/laravel/serializable-closure/issues",
                 "source": "https://github.com/laravel/serializable-closure"
             },
-<<<<<<< HEAD
-            "time": "2025-02-11T15:03:05+00:00"
-=======
             "time": "2025-03-19T13:51:03+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "laravel/tinker",
@@ -2130,18 +2008,6 @@
         },
         {
             "name": "monolog/monolog",
-<<<<<<< HEAD
-            "version": "3.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
-                "reference": "aef6ee73a77a66e404dd6540934a9ef1b3c855b4",
-=======
             "version": "3.9.0",
             "source": {
                 "type": "git",
@@ -2152,7 +2018,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/Seldaek/monolog/zipball/10d85740180ecba7896c87e06a166e0c95a0e3b6",
                 "reference": "10d85740180ecba7896c87e06a166e0c95a0e3b6",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -2230,11 +2095,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/Seldaek/monolog/tree/3.8.1"
-=======
                 "source": "https://github.com/Seldaek/monolog/tree/3.9.0"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -2246,22 +2107,6 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-12-05T17:15:07+00:00"
-        },
-        {
-            "name": "nesbot/carbon",
-            "version": "3.8.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "ff2f20cf83bd4d503720632ce8a426dc747bf7fd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ff2f20cf83bd4d503720632ce8a426dc747bf7fd",
-                "reference": "ff2f20cf83bd4d503720632ce8a426dc747bf7fd",
-=======
             "time": "2025-03-24T10:02:05+00:00"
         },
         {
@@ -2276,7 +2121,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/6d16a8a015166fe54e22c042e0805c5363aef50d",
                 "reference": "6d16a8a015166fe54e22c042e0805c5363aef50d",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -2369,11 +2213,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-02-20T17:33:38+00:00"
-=======
             "time": "2025-03-27T12:57:33+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "nette/schema",
@@ -2439,18 +2279,6 @@
         },
         {
             "name": "nette/utils",
-<<<<<<< HEAD
-            "version": "v4.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/utils.git",
-                "reference": "736c567e257dbe0fcf6ce81b4d6dbe05c6899f96"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/736c567e257dbe0fcf6ce81b4d6dbe05c6899f96",
-                "reference": "736c567e257dbe0fcf6ce81b4d6dbe05c6899f96",
-=======
             "version": "v4.0.6",
             "source": {
                 "type": "git",
@@ -2461,7 +2289,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/nette/utils/zipball/ce708655043c7050eb050df361c5e313cf708309",
                 "reference": "ce708655043c7050eb050df361c5e313cf708309",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -2532,15 +2359,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/nette/utils/tree/v4.0.5"
-            },
-            "time": "2024-08-07T15:39:19+00:00"
-=======
                 "source": "https://github.com/nette/utils/tree/v4.0.6"
             },
             "time": "2025-03-30T21:06:30+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "nikic/php-parser",
@@ -3176,18 +2997,6 @@
         },
         {
             "name": "psy/psysh",
-<<<<<<< HEAD
-            "version": "v0.12.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
-                "reference": "d73fa3c74918ef4522bb8a3bf9cab39161c4b57c",
-=======
             "version": "v0.12.8",
             "source": {
                 "type": "git",
@@ -3198,7 +3007,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/bobthecow/psysh/zipball/85057ceedee50c49d4f6ecaff73ee96adb3b3625",
                 "reference": "85057ceedee50c49d4f6ecaff73ee96adb3b3625",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -3262,15 +3070,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/bobthecow/psysh/tree/v0.12.7"
-            },
-            "time": "2024-12-10T01:58:33+00:00"
-=======
                 "source": "https://github.com/bobthecow/psysh/tree/v0.12.8"
             },
             "time": "2025-03-16T03:05:19+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "ralouphie/getallheaders",
@@ -3318,18 +3120,6 @@
         },
         {
             "name": "ramsey/collection",
-<<<<<<< HEAD
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ramsey/collection.git",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/collection/zipball/3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
-                "reference": "3c5990b8a5e0b79cd1cf11c2dc1229e58e93f109",
-=======
             "version": "2.1.1",
             "source": {
                 "type": "git",
@@ -3340,7 +3130,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/ramsey/collection/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -3401,15 +3190,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/collection/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/ramsey/collection/tree/2.1.0"
-            },
-            "time": "2025-03-02T04:48:29+00:00"
-=======
                 "source": "https://github.com/ramsey/collection/tree/2.1.1"
             },
             "time": "2025-03-22T05:38:12+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "ramsey/uuid",
@@ -3579,18 +3362,6 @@
         },
         {
             "name": "symfony/console",
-<<<<<<< HEAD
-            "version": "v7.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-                "reference": "fefcc18c0f5d0efe3ab3152f15857298868dc2c3",
-=======
             "version": "v7.2.5",
             "source": {
                 "type": "git",
@@ -3601,7 +3372,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/console/zipball/e51498ea18570c062e7df29d05a7003585b19b88",
                 "reference": "e51498ea18570c062e7df29d05a7003585b19b88",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -3665,11 +3435,7 @@
                 "terminal"
             ],
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/console/tree/v7.2.1"
-=======
                 "source": "https://github.com/symfony/console/tree/v7.2.5"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -3685,11 +3451,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-12-11T03:49:26+00:00"
-=======
             "time": "2025-03-12T08:11:12+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "symfony/css-selector",
@@ -3825,18 +3587,6 @@
         },
         {
             "name": "symfony/error-handler",
-<<<<<<< HEAD
-            "version": "v7.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/error-handler.git",
-                "reference": "aabf79938aa795350c07ce6464dd1985607d95d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/aabf79938aa795350c07ce6464dd1985607d95d5",
-                "reference": "aabf79938aa795350c07ce6464dd1985607d95d5",
-=======
             "version": "v7.2.5",
             "source": {
                 "type": "git",
@@ -3847,7 +3597,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/error-handler/zipball/102be5e6a8e4f4f3eb3149bcbfa33a80d1ee374b",
                 "reference": "102be5e6a8e4f4f3eb3149bcbfa33a80d1ee374b",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -3893,11 +3642,7 @@
             "description": "Provides tools to manage errors and ease debugging PHP code",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/error-handler/tree/v7.2.4"
-=======
                 "source": "https://github.com/symfony/error-handler/tree/v7.2.5"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -3913,11 +3658,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-02-02T20:27:07+00:00"
-=======
             "time": "2025-03-03T07:12:39+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "symfony/event-dispatcher",
@@ -4141,18 +3882,6 @@
         },
         {
             "name": "symfony/http-foundation",
-<<<<<<< HEAD
-            "version": "v7.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "ee1b504b8926198be89d05e5b6fc4c3810c090f0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/ee1b504b8926198be89d05e5b6fc4c3810c090f0",
-                "reference": "ee1b504b8926198be89d05e5b6fc4c3810c090f0",
-=======
             "version": "v7.2.5",
             "source": {
                 "type": "git",
@@ -4163,7 +3892,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-foundation/zipball/371272aeb6286f8135e028ca535f8e4d6f114126",
                 "reference": "371272aeb6286f8135e028ca535f8e4d6f114126",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -4212,11 +3940,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/http-foundation/tree/v7.2.3"
-=======
                 "source": "https://github.com/symfony/http-foundation/tree/v7.2.5"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -4232,22 +3956,6 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-01-17T10:56:55+00:00"
-        },
-        {
-            "name": "symfony/http-kernel",
-            "version": "v7.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "9f1103734c5789798fefb90e91de4586039003ed"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/9f1103734c5789798fefb90e91de4586039003ed",
-                "reference": "9f1103734c5789798fefb90e91de4586039003ed",
-=======
             "time": "2025-03-25T15:54:33+00:00"
         },
         {
@@ -4262,7 +3970,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/http-kernel/zipball/b1fe91bc1fa454a806d3f98db4ba826eb9941a54",
                 "reference": "b1fe91bc1fa454a806d3f98db4ba826eb9941a54",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -4347,11 +4054,7 @@
             "description": "Provides a structured process for converting a Request into a Response",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/http-kernel/tree/v7.2.4"
-=======
                 "source": "https://github.com/symfony/http-kernel/tree/v7.2.5"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -4367,11 +4070,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-02-26T11:01:22+00:00"
-=======
             "time": "2025-03-28T13:32:50+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "symfony/mailer",
@@ -5175,18 +4874,6 @@
         },
         {
             "name": "symfony/process",
-<<<<<<< HEAD
-            "version": "v7.2.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/process.git",
-                "reference": "d8f411ff3c7ddc4ae9166fb388d1190a2df5b5cf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/d8f411ff3c7ddc4ae9166fb388d1190a2df5b5cf",
-                "reference": "d8f411ff3c7ddc4ae9166fb388d1190a2df5b5cf",
-=======
             "version": "v7.2.5",
             "source": {
                 "type": "git",
@@ -5197,7 +4884,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/process/zipball/87b7c93e57df9d8e39a093d32587702380ff045d",
                 "reference": "87b7c93e57df9d8e39a093d32587702380ff045d",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -5229,11 +4915,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/process/tree/v7.2.4"
-=======
                 "source": "https://github.com/symfony/process/tree/v7.2.5"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -5249,11 +4931,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-02-05T08:33:46+00:00"
-=======
             "time": "2025-03-13T12:21:46+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "symfony/routing",
@@ -6174,18 +5852,6 @@
         },
         {
             "name": "filp/whoops",
-<<<<<<< HEAD
-            "version": "2.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/filp/whoops.git",
-                "reference": "075bc0c26631110584175de6523ab3f1652eb28e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/075bc0c26631110584175de6523ab3f1652eb28e",
-                "reference": "075bc0c26631110584175de6523ab3f1652eb28e",
-=======
             "version": "2.18.0",
             "source": {
                 "type": "git",
@@ -6196,7 +5862,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/filp/whoops/zipball/a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
                 "reference": "a7de6c3c6c3c022f5cfc337f8ede6a14460cf77e",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -6246,11 +5911,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-<<<<<<< HEAD
-                "source": "https://github.com/filp/whoops/tree/2.17.0"
-=======
                 "source": "https://github.com/filp/whoops/tree/2.18.0"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -6258,11 +5919,7 @@
                     "type": "github"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-01-25T12:00:00+00:00"
-=======
             "time": "2025-03-15T12:00:00+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -6316,8 +5973,6 @@
             "time": "2020-07-09T08:09:16+00:00"
         },
         {
-<<<<<<< HEAD
-=======
             "name": "laravel/installer",
             "version": "v5.14.2",
             "source": {
@@ -6374,7 +6029,6 @@
             "time": "2025-04-01T14:53:28+00:00"
         },
         {
->>>>>>> refactor/estrutura-laravel-nova
             "name": "laravel/pail",
             "version": "v1.2.2",
             "source": {
@@ -6454,18 +6108,6 @@
         },
         {
             "name": "laravel/pint",
-<<<<<<< HEAD
-            "version": "v1.21.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/pint.git",
-                "reference": "c44bffbb2334e90fba560933c45948fa4a3f3e86"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/pint/zipball/c44bffbb2334e90fba560933c45948fa4a3f3e86",
-                "reference": "c44bffbb2334e90fba560933c45948fa4a3f3e86",
-=======
             "version": "v1.22.0",
             "source": {
                 "type": "git",
@@ -6476,7 +6118,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pint/zipball/7ddfaa6523a675fae5c4123ee38fc6bfb8ee4f36",
                 "reference": "7ddfaa6523a675fae5c4123ee38fc6bfb8ee4f36",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -6487,15 +6128,9 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
-<<<<<<< HEAD
-                "friendsofphp/php-cs-fixer": "^3.70.2",
-                "illuminate/view": "^11.44.1",
-                "larastan/larastan": "^3.1.0",
-=======
                 "friendsofphp/php-cs-fixer": "^3.75.0",
                 "illuminate/view": "^11.44.2",
                 "larastan/larastan": "^3.3.1",
->>>>>>> refactor/estrutura-laravel-nova
                 "laravel-zero/framework": "^11.36.1",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3",
@@ -6535,11 +6170,7 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-<<<<<<< HEAD
-            "time": "2025-03-11T03:22:21+00:00"
-=======
             "time": "2025-04-08T22:11:45+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "laravel/sail",
@@ -6749,40 +6380,6 @@
         },
         {
             "name": "nunomaduro/collision",
-<<<<<<< HEAD
-            "version": "v8.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "86f003c132143d5a2ab214e19933946409e0cae7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/86f003c132143d5a2ab214e19933946409e0cae7",
-                "reference": "86f003c132143d5a2ab214e19933946409e0cae7",
-                "shasum": ""
-            },
-            "require": {
-                "filp/whoops": "^2.16.0",
-                "nunomaduro/termwind": "^2.3.0",
-                "php": "^8.2.0",
-                "symfony/console": "^7.2.1"
-            },
-            "conflict": {
-                "laravel/framework": "<11.39.1 || >=13.0.0",
-                "phpunit/phpunit": "<11.5.3 || >=12.0.0"
-            },
-            "require-dev": {
-                "larastan/larastan": "^2.9.12",
-                "laravel/framework": "^11.39.1",
-                "laravel/pint": "^1.20.0",
-                "laravel/sail": "^1.40.0",
-                "laravel/sanctum": "^4.0.7",
-                "laravel/tinker": "^2.10.0",
-                "orchestra/testbench-core": "^9.9.2",
-                "pestphp/pest": "^3.7.3",
-                "sebastian/environment": "^6.1.0 || ^7.2.0"
-=======
             "version": "v8.8.0",
             "source": {
                 "type": "git",
@@ -6816,7 +6413,6 @@
                 "orchestra/testbench-core": "^9.12.0 || ^10.1",
                 "pestphp/pest": "^3.8.0",
                 "sebastian/environment": "^7.2.0 || ^8.0"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "type": "library",
             "extra": {
@@ -6879,11 +6475,7 @@
                     "type": "patreon"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-01-23T13:41:43+00:00"
-=======
             "time": "2025-04-03T14:33:09+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "phar-io/manifest",
@@ -7328,18 +6920,6 @@
         },
         {
             "name": "phpunit/phpunit",
-<<<<<<< HEAD
-            "version": "11.5.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d42785840519401ed2113292263795eb4c0f95da"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d42785840519401ed2113292263795eb4c0f95da",
-                "reference": "d42785840519401ed2113292263795eb4c0f95da",
-=======
             "version": "11.5.17",
             "source": {
                 "type": "git",
@@ -7350,7 +6930,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fd2e863a2995cdfd864fb514b5e0b28b09895b5c",
                 "reference": "fd2e863a2995cdfd864fb514b5e0b28b09895b5c",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -7370,22 +6949,14 @@
                 "phpunit/php-text-template": "^4.0.1",
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
-<<<<<<< HEAD
-                "sebastian/code-unit": "^3.0.2",
-=======
                 "sebastian/code-unit": "^3.0.3",
->>>>>>> refactor/estrutura-laravel-nova
                 "sebastian/comparator": "^6.3.1",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
                 "sebastian/exporter": "^6.3.0",
                 "sebastian/global-state": "^7.0.2",
                 "sebastian/object-enumerator": "^6.0.1",
-<<<<<<< HEAD
-                "sebastian/type": "^5.1.0",
-=======
                 "sebastian/type": "^5.1.2",
->>>>>>> refactor/estrutura-laravel-nova
                 "sebastian/version": "^5.0.2",
                 "staabm/side-effects-detector": "^1.0.5"
             },
@@ -7430,11 +7001,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-<<<<<<< HEAD
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.12"
-=======
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5.17"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -7450,11 +7017,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-03-07T07:31:03+00:00"
-=======
             "time": "2025-04-08T07:59:11+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "sebastian/cli-parser",
@@ -7515,18 +7078,6 @@
         },
         {
             "name": "sebastian/code-unit",
-<<<<<<< HEAD
-            "version": "3.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/code-unit.git",
-                "reference": "ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca",
-                "reference": "ee88b0cdbe74cf8dd3b54940ff17643c0d6543ca",
-=======
             "version": "3.0.3",
             "source": {
                 "type": "git",
@@ -7537,7 +7088,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/54391c61e4af8078e5b276ab082b6d3c54c9ad64",
                 "reference": "54391c61e4af8078e5b276ab082b6d3c54c9ad64",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -7573,11 +7123,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/code-unit/issues",
                 "security": "https://github.com/sebastianbergmann/code-unit/security/policy",
-<<<<<<< HEAD
-                "source": "https://github.com/sebastianbergmann/code-unit/tree/3.0.2"
-=======
                 "source": "https://github.com/sebastianbergmann/code-unit/tree/3.0.3"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -7585,11 +7131,7 @@
                     "type": "github"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-12-12T09:59:06+00:00"
-=======
             "time": "2025-03-19T07:56:08+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -8294,18 +7836,6 @@
         },
         {
             "name": "sebastian/type",
-<<<<<<< HEAD
-            "version": "5.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "461b9c5da241511a2a0e8f240814fb23ce5c0aac"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/461b9c5da241511a2a0e8f240814fb23ce5c0aac",
-                "reference": "461b9c5da241511a2a0e8f240814fb23ce5c0aac",
-=======
             "version": "5.1.2",
             "source": {
                 "type": "git",
@@ -8316,7 +7846,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/a8a7e30534b0eb0c77cd9d07e82de1a114389f5e",
                 "reference": "a8a7e30534b0eb0c77cd9d07e82de1a114389f5e",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -8352,11 +7881,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
                 "security": "https://github.com/sebastianbergmann/type/security/policy",
-<<<<<<< HEAD
-                "source": "https://github.com/sebastianbergmann/type/tree/5.1.0"
-=======
                 "source": "https://github.com/sebastianbergmann/type/tree/5.1.2"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -8364,11 +7889,7 @@
                     "type": "github"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2024-09-17T13:12:04+00:00"
-=======
             "time": "2025-03-18T13:35:50+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "sebastian/version",
@@ -8478,18 +7999,6 @@
         },
         {
             "name": "symfony/yaml",
-<<<<<<< HEAD
-            "version": "v7.2.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "ac238f173df0c9c1120f862d0f599e17535a87ec"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/ac238f173df0c9c1120f862d0f599e17535a87ec",
-                "reference": "ac238f173df0c9c1120f862d0f599e17535a87ec",
-=======
             "version": "v7.2.5",
             "source": {
                 "type": "git",
@@ -8500,7 +8009,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/4c4b6f4cfcd7e52053f0c8bfad0f7f30fb924912",
                 "reference": "4c4b6f4cfcd7e52053f0c8bfad0f7f30fb924912",
->>>>>>> refactor/estrutura-laravel-nova
                 "shasum": ""
             },
             "require": {
@@ -8543,11 +8051,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
-                "source": "https://github.com/symfony/yaml/tree/v7.2.3"
-=======
                 "source": "https://github.com/symfony/yaml/tree/v7.2.5"
->>>>>>> refactor/estrutura-laravel-nova
             },
             "funding": [
                 {
@@ -8563,11 +8067,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2025-01-07T12:55:42+00:00"
-=======
             "time": "2025-03-03T07:12:39+00:00"
->>>>>>> refactor/estrutura-laravel-nova
         },
         {
             "name": "theseer/tokenizer",
