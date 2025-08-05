@@ -15,6 +15,7 @@ use App\Http\Controllers\{
 Route::prefix('v1')->middleware('api')->group(function () {
 
     Route::apiResource('cities', CityController::class)->names('cities');
+    Route::get('properties/search', [PropertyController::class, 'indexBrief'])->name('properties.search');
     Route::apiResource('properties', PropertyController::class)->names('properties');
     Route::apiResource('property-images', PropertyImageController::class)->names('property-images');
     Route::get('/property-images/images-by-property/{propertyId}', [PropertyImageController::class, 'getImagesByPropertyId'])->name('property-images.by-property');
@@ -23,5 +24,10 @@ Route::prefix('v1')->middleware('api')->group(function () {
     Route::apiResource('site-statistics', SiteStatisticsController::class)->names('site-statistics');
     Route::apiResource('statuses', StatusController::class)->names('statuses');
     Route::apiResource('testimonials', TestimonialController::class)->names('testimonials');
+    Route::get('/teste', function () {
+        return ['mensagem' => 'API funcionando!'];
+    });
+
 
 });
+
