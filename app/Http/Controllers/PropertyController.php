@@ -114,7 +114,6 @@ class PropertyController extends Controller
     public function show(string $id)
     {
 
-        \Log::info("Tentando buscar imóvel com ID: {$id}");
         try {
             $property = Property::findOrFail($id);
             return ApiResponse::success($property, 'Imóvel encontrado com sucesso.');
