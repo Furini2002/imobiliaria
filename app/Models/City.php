@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static create(array $data)
@@ -26,5 +27,10 @@ class City extends Model
     public function testimonials()
     {
         return $this->hasMany(Testimonial::class);
+    }
+
+    public function neighborhoods(): HasMany
+    {
+        return $this->hasMany(Neighborhood::class);
     }
 }

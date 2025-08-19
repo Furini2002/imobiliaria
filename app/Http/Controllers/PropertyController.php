@@ -27,6 +27,9 @@ class PropertyController extends Controller
         if ($request->filled('type')) {
             $query->where('type_id', $request->type);
         }
+        if ($request->has('limit')) {
+            $query->take($request->get('limit'));
+        }
 
         return ApiResponse::success($query->get());
     }
@@ -44,8 +47,30 @@ class PropertyController extends Controller
         if ($request->filled('type')) {
             $query->where('type_id', $request->type);
         }
+        if ($request->filled('maxPrice')) {
+            $query->where('price', '<=', (float) $request->maxPrice);
+        }
+        if ($request->filled('bathrooms')) {
+            $query->where('bathrooms', '>=', (int) $request->bathrooms);
+        }
+        if ($request->filled('bedrooms')) {
+            $query->where('bedrooms', '>=', (int) $request->bedrooms);
+        }
+        if ($request->filled('suites') && (int) $request->suites > 0) {
+            $query->where('suites', '>=', (int) $request->suites);
+        }
+        if ($request->filled('neighborhood')) {
+            $query->where('neighborhood_id', $request->integer('neighborhood'));
+        }
 
-        $properties = $query->with(['city', 'images'])->get();
+        $properties = $query->with([
+            'city:id,name',
+            'firstImage' => fn($q) => $q->select(
+                'property_images.id',
+                'property_images.property_id',
+                'property_images.image_path'
+            ),
+        ])->get();
 
         $result = $properties->map(function ($property) {
             return [
@@ -55,8 +80,9 @@ class PropertyController extends Controller
                 'bathrooms' => $property->bathrooms,
                 'bedrooms' => $property->bedrooms,
                 'built_area' => $property->built_area,
-                'city' => $property->city ? $property->city->name : null,
-                'image' => $property->images->first() ? $property->images->first()->url : null,
+                'city' => optional($property->city)->name,
+                'neighborhood'=> optional($property->neighborhood)->name,
+                'image' => optional($property->firstImage)->image_path,
             ];
         });
 

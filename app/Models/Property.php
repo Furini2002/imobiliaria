@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @method static create(array $data)
@@ -21,6 +22,7 @@ class Property extends Model
         'bathrooms', 'land_area', 'built_area',
         'views', 'leads_generated', 'last_update',
         'status_id', 'type_id', 'city_id',
+        'neighborhood_id', 'suites'
     ];
 
     public function status(): BelongsTo
@@ -38,8 +40,18 @@ class Property extends Model
         return $this->belongsTo(City::class);
     }
 
-    public function images()
+    public function images(): HasMany
     {
         return $this->hasMany(PropertyImage::class);
+    }
+
+    public function firstImage()
+    {
+        return $this->hasOne(PropertyImage::class)->oldestOfMany();
+    }
+
+    public function neighborhood(): BelongsTo
+    {
+        return $this->belongsTo(Neighborhood::class);
     }
 }
